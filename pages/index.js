@@ -1,64 +1,93 @@
 import Head from 'next/head'
+import {Navbar, Nav, Carousel} from 'react-bootstrap';
+
+import Image from 'next/image'
+import star from './images/star3.svg'
 import styles from '../styles/Home.module.css'
+
+import slide1 from './images/EOV/S01.jpg'
+import slide2 from './images/EOV/S02.jpg'
+import slide3 from './images/EOV/S03.jpg'
+import slide4 from './images/EOV/S04.jpg'
+import slide5 from './images/EOV/S05.jpg'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Far Star Studio</title>
+        <link rel="icon" href="/farstar3.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand href="#home">
+        <img
+          className="d-inline-block align-top mx-2"
+          src={star}
+          alt="Far Star Studio Logo"
+          width={30}
+          height={30}
+        />
+          遠星工作室
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#features">英勇紋章</Nav.Link>
+          </Nav>
+          <Nav className="mx-2">
+            <Nav.Link href="#features">關於我們</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <main>
+        <Carousel indicators={false}>
+          <Carousel.Item>
+            <div className="vw-100 vh-80 bg-black">
+              <img
+                className="d-block w-100"
+                src={slide1}
+                alt="First slide"
+              />
+              {/* <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption> */}
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={slide2}
+              alt="Second slide"
+            />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+            {/* <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption> */}
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={slide3}
+              alt="Third slide"
+            />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+            {/* <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption> */}
+          </Carousel.Item>
+        </Carousel>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <span>© FarStar Studio 2021</span>
       </footer>
     </div>
   )
