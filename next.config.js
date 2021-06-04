@@ -14,10 +14,6 @@ module.exports = withImages({
         domains: [
           {
             domain: 'farstar-studio.com',
-            defaultLocale: 'en-US',
-          },
-          {
-            domain: 'farstar-studio.tw',
             defaultLocale: 'zh-TW',
           }
         ],
