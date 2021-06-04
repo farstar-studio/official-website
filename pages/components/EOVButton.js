@@ -1,3 +1,5 @@
+import {FormattedMessage} from 'react-intl';
+
 import buttonImg from '../images/EOV/ui/Button4.png'
 
 export default function EOVButton(props){
@@ -15,7 +17,9 @@ export default function EOVButton(props){
 
     return (
     <a className="btn p-0" href={props.href} target="_blank" style={buttonStyle}>
-        <span style={{color: "white", fontSize: `${baseSize * 0.4}rem`, verticalAlign: "middle"}}>下載</span>
+        <span style={{color: "white", fontSize: `${baseSize * 0.4}rem`, verticalAlign: "middle"}}>
+            <FormattedMessage id="Download" defaultMessage="Download" />
+        </span>
     </a>
     )
 }

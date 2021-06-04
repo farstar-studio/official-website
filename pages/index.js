@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import {Navbar, Nav, Carousel, Container, Row} from 'react-bootstrap';
+import {IntlProvider, FormattedMessage, FormattedNumber} from 'react-intl';
 
 import Image from 'next/image';
 import star from './images/star3.svg';
@@ -38,21 +39,27 @@ export default function Home() {
                 width={30}
                 height={30}
               />
-                遠星工作室
+                <FormattedMessage id="Far Star Studio" defaultMessage="Far Star Studio" />
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link href="#features">英勇紋章</Nav.Link>
+                  <Nav.Link href="#features">
+                    <FormattedMessage id="Emblem of Valor" defaultMessage="Emblem of Valor" />
+                  </Nav.Link>
                 </Nav>
                 <Nav className="mx-2">
-                  <Nav.Link href="#features">關於我們</Nav.Link>
+                  <Nav.Link href="#features">
+                    <FormattedMessage id="About Us" defaultMessage="About Us" />
+                  </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
           </Row>
           <section className="my-4">
-            <h2 className="text-center my-2"><strong>最新消息</strong></h2>
+            <h2 className="text-center my-2"><strong>
+              <FormattedMessage id="News" defaultMessage="News" />
+            </strong></h2>
             <div className="d-flex flex-row justify-content-center align-items-center p-2">
               <AvatarFrame src={archerAvatar} />
               <div className="d-flex flex-column">
@@ -64,7 +71,9 @@ export default function Home() {
             </div>
           </section>
           <section className="my-4">
-            <h2 className="text-center my-2"><strong>遊戲畫面</strong></h2>
+            <h2 className="text-center my-2"><strong>
+              <FormattedMessage id="Screenshots" defaultMessage="Screenshots" />
+            </strong></h2>
             <div className="d-flex justify-content-center align-items-center">
               <Carousel indicators={false} className={styles.slides}>
                 <Carousel.Item>
