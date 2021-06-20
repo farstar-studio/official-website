@@ -33,7 +33,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <section className="vw-100 vh-100 position-absolute">
+        <section className="w-100 h-100 position-absolute">
           <div id={styles["video-banner-div"]}>
             <video id={styles["video-background"]} autoPlay loop muted>
               <source src="/EOV_demo3.mp4" />
@@ -42,8 +42,8 @@ export default function Home() {
           <div id={styles["video-foreground"]} className="d-flex justify-content-center align-items-center">
           </div>
         </section>
-
-        <section className="d-flex flex-column vw-100 vh-100">
+        
+        <section className="d-flex flex-column vh-100">
           <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark">
             <Navbar.Brand href="/">
             <img
@@ -69,8 +69,9 @@ export default function Home() {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <div id={styles["game-intro"]} className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
+          <div id={styles["game-intro"]} className="d-flex flex-column flex-grow-1 justify-content-center align-items-center" data-aos="fade-down">
             <span className="text-center"><strong>英勇紋章</strong>是一款由臺灣獨立開發團隊製作的牌組構築遊戲，並結合角色扮演與RougeLike要素</span>
+            <div className="my-2"/>
             <span className="text-center">目前提供早期開發版本進行試玩，歡迎下載並提供意見給我們！</span>
             <div className="my-2"></div>
             <EOVButton href="#download-section">
@@ -79,7 +80,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Row>
+        <Row className="m-0">
           <Col id="download-section" md={12} lg={6} className="my-4">
             <div className="d-flex flex-row align-items-center justify-content-center">
               <AvatarFrame src={archerAvatar} />
@@ -210,7 +211,7 @@ export default function Home() {
           </Col>
         </Row>
 
-        <Row id={styles["about-us"]} >
+        <Row id={styles["about-us"]} className="m-0">
           <Col lg={12} className="justify-content-center align-items-center py-3">
             <h2 className="text-center"><strong><FormattedMessage id="About Us" defaultMessage="About Us" /></strong></h2>
           </Col>

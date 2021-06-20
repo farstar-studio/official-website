@@ -138,16 +138,16 @@
 
 #video-banner-div {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
 
 #video-background {
   position: absolute;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -155,8 +155,8 @@
 
 #video-foreground {
   position: absolute;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   background-color: rgba(0,0,0,0.75);
 }
 

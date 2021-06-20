@@ -2,8 +2,11 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router'
 import {IntlProvider, FormattedMessage, FormattedNumber} from 'react-intl';
 import TagManager from 'react-gtm-module';
+import NextNprogress from 'nextjs-progressbar';
+import AOS from "aos";
 
 import '../styles/globals.css'
+import 'aos/dist/aos.css';
 
 
 const languages = {
@@ -17,6 +20,12 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-MRRTLKB' });
+
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 50
+    });
   }, []);
   
   const messages = languages[shortLocale];
