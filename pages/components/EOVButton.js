@@ -16,9 +16,9 @@ export default function EOVButton(props){
     };
 
     return (
-    <a className="btn p-0" href={props.href} target="_blank" style={buttonStyle}>
+    <a className="btn p-0" href={props.href} target={props.target} style={buttonStyle}>
         <span style={{color: "white", fontSize: `${baseSize * 0.4}rem`, verticalAlign: "middle"}}>
-            <FormattedMessage id="Download" defaultMessage="Download" />
+            {props.children}
         </span>
     </a>
     )
