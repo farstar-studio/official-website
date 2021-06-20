@@ -215,12 +215,14 @@ export default function Home() {
           <Col lg={12} className="justify-content-center align-items-center py-3">
             <h2 className="text-center"><strong><FormattedMessage id="About Us" defaultMessage="About Us" /></strong></h2>
           </Col>
-          <Col md={12} lg={5} className="my-3 d-flex flex-row align-items-center" style={{backgroundColor: "black", color: "white"}}>
-            <img src="/FarStar.png" width="400" />
-            <div className="d-flex flex-column">
+          <Col md={12} lg={5} className="my-3 d-flex flex-wrap align-items-center" style={{backgroundColor: "black", color: "white"}}>
+            <Col xs={12} sm={7} md={8}>
+              <img src="/FarStar.png" className="img-fluid" />
+            </Col>
+            <Col xs={12} sm={5} md={4} className="d-flex flex-column">
               <span>遠星工作室成立於2021年，目前成員人數為2人</span>
               <span>會取這個名字，是因為夢想就像一顆遙遠的明星</span>
-            </div>
+            </Col>
           </Col>
           <Col md={12} lg={7} className="my-3 d-flex flex-row align-items-center justify-content-center" >
             <Card style={{ width: '18rem' }}>
